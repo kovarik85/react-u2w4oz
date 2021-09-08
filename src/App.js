@@ -5,5 +5,5 @@ import Szoba from './Szoba';
 import PartySzobaFunc from './PartySzobaFunc';
 
 export default function App() {
-  return <PartySzobaFunc />;
+  return <Szoba/>;
 }

@@ -5,16 +5,9 @@ import VillanyKapcsolo from './VillanyKapcsolo';
 export default class Szoba extends React.Component {
   constructor(props) {
     super(props);
-    this.kapcsolTeszt = this.kapcsolTeszt.bind(this);
   }
 
   state = { egAVillany: false, ajtoBeVanCsukva: true };
-
-  kapcsolTeszt() {
-    this.setState(prevState => ({
-      egAVillany: !prevState.egAVillany
-    }));
-  }
 
   kapcsol = () => {
     this.setState(prevState => ({
