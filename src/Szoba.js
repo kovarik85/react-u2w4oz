@@ -1,13 +1,14 @@
 import React from 'react';
 import Fal from './Fal';
 import VillanyKapcsolo from './VillanyKapcsolo';
+import Termosztat from './Termosztat';
 
 export default class Szoba extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  state = { egAVillany: false, ajtoBeVanCsukva: true };
+  state = { egAVillany: true, ajtoBeVanCsukva: true };
 
   kapcsol = () => {
     this.setState(prevState => ({
@@ -18,6 +19,8 @@ export default class Szoba extends React.Component {
   render() {
     return (
       <Fal vanEFeny={this.state.egAVillany}>
+        <Termosztat color={this.state.egAVillany}/>
+
         <VillanyKapcsolo
           kapcsolasra={this.kapcsol}
           beVanKapcsolva={this.state.egAVillany}
